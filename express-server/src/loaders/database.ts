@@ -4,6 +4,7 @@ import config from '../config';
 let db: Db;
 
 async function initializeClient(): Promise<Db> {
+  console.log(config.databaseURL)
   const client = await MongoClient.connect(config.databaseURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
